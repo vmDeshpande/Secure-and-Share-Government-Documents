@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureDocs | Digital Document Locker</title>
+
+    <!-- 🌐 Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 612 612'><path fill='%230ea5e9' d='M466.5 83.7 278.9 6.2c-15.9-6.5-33.8-6.5-49.7 0L45.5 83.7c-18.2 7.4-30.1 25-30.1 44.6v110.8c0 121 68.6 232.7 175.1 287.6l36.2 18.1c11.9 6 26 6 37.9 0l36.2-18.1c106.5-54.9 175.1-166.6 175.1-287.6V128.3c0-19.6-11.9-37.2-30.1-44.6z'/></svg>"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <!-- <script src="https://kit.fontawesome.com/a2d9d5a64b.js" crossorigin="anonymous"></script> -->
+  </head>
+
+  <body class="bg-gray-950 text-gray-100 font-sans min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <header class="bg-gray-900/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+      <nav class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-blue-500 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-blue-400"></i> SecureDocs
+        </h1>
+        <div class="space-x-4 hidden md:block">
+          <a href="#home" class="hover:text-blue-400 transition">Home</a>
+          <a href="#about" class="hover:text-blue-400 transition">About</a>
+          <a href="#features" class="hover:text-blue-400 transition">Features</a>
+          <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+        </div>
+        <div class="space-x-3">
+          <a id="loginLink" href="auth.html" class="px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-sm font-medium">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+          </a>
+          <a id="registerLink" href="auth.html" class="px-3 py-2 bg-green-600 hover:bg-green-700 rounded-md text-sm font-medium">
+            <i class="fa-solid fa-user-plus"></i> Register
+          </a>
+          <a id="logoutButton" href="index.html" class="px-3 py-2 bg-red-600 hover:bg-red-700 rounded-md text-sm font-medium">
+            <i class="fa-solid fa-user-plus"></i> Logout
+          </a>
+          <a id="dashboard" href="dashboard.html" class="px-3 py-2 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-gauge-high"></i> Go to Dashboard
+        </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="flex flex-col items-center justify-center text-center py-20 px-6 bg-gradient-to-b from-gray-950 to-gray-900">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-blue-400">Your Documents. Secured. Shared.</h2>
+      <p class="text-gray-300 max-w-2xl mb-8">
+        Store, manage, and share your government documents safely — all in one place.
+        Linked with your Aadhaar for instant, secure access anywhere.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="dashboard.html" class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-md font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Upload Document
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-900">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold text-blue-400 mb-8">Features</h3>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-blue-500/20 transition">
+            <i class="fa-solid fa-lock text-4xl text-blue-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Secure Storage</h4>
+            <p class="text-gray-400">Documents are encrypted and stored securely in the cloud using your Aadhaar-linked account.</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-blue-500/20 transition">
+            <i class="fa-solid fa-share-nodes text-4xl text-green-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Easy Sharing</h4>
+            <p class="text-gray-400">Share your mark sheets, PAN cards, and more with verified family members safely.</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-blue-500/20 transition">
+            <i class="fa-solid fa-file-circle-check text-4xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-semibold mb-2">Smart Access</h4>
+            <p class="text-gray-400">Access your digital locker from anywhere — no more fear of losing physical copies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-950 text-center px-6">
+      <h3 class="text-3xl font-bold text-blue-400 mb-6">About SecureDocs</h3>
+      <p class="max-w-2xl mx-auto text-gray-400">
+        SecureDocs is a digital document locker platform that reduces government overhead costs by eliminating the need for physical document storage.
+        With Aadhaar integration, your documents stay unique, safe, and easy to share.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-center px-6">
+      <h3 class="text-3xl font-bold text-blue-400 mb-6">Contact Us</h3>
+      <p class="text-gray-400 mb-6">Have questions or feedback? Get in touch!</p>
+      <a href="mailto:support@securedocs.in" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold">
+        <i class="fa-solid fa-envelope"></i> support@securedocs.in
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-6 text-center text-gray-500 border-t border-gray-800">
+      <p>© 2025 SecureDocs. All Rights Reserved.</p>
+    </footer>
+<script src="./js/script.js"></script>
+  </body>
+</html>
